@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.oauth2.server.mapper.oauth2.Oauth2ClientMapper">
+  <resultMap id="BaseResultMap" type="demo.oauth2.server.model.oauth2.Oauth2Client">
+      <id column="model_id" jdbcType="INTEGER" property="modelId" />
+      <result column="client_name" jdbcType="VARCHAR" property="clientName" />
+      <result column="client_id" jdbcType="VARCHAR" property="clientId" />
+      <result column="client_secret" jdbcType="VARCHAR" property="clientSecret" />
+      <result column="client_uri" jdbcType="VARCHAR" property="clientUri" />
+      <result column="resource_ids" jdbcType="VARCHAR" property="resourceIds" />
+      <result column="scope" jdbcType="VARCHAR" property="scope" />
+      <result column="grant_types" jdbcType="VARCHAR" property="grantTypes" />
+      <result column="allowed_ips" jdbcType="VARCHAR" property="allowedIps" />
+      <result column="status" jdbcType="INTEGER" property="status" />
+      <result column="trusted" jdbcType="INTEGER" property="trusted" />
+  </resultMap>
+
+  <select id="selectById" parameterType="Integer" resultMap="BaseResultMap">
+    select * from oauth2_client where model_id = #{modelId};
+  </select>
+  <select id="selectByClientId" parameterType="String" resultMap="BaseResultMap">
+    select * from oauth2_client where client_id = #{clientId};
+  </select>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.oauth2.resource.mapper.front.FrontUserMapper">
+  <resultMap id="BaseResultMap" type="demo.oauth2.resource.model.front.FrontUser">
+      <id column="model_id" jdbcType="INTEGER" property="modelId" />
+      <result column="username" jdbcType="VARCHAR" property="username" />
+      <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+      <result column="password" jdbcType="VARCHAR" property="password" />
+      <result column="realname" jdbcType="VARCHAR" property="realname" />
+      <result column="email" jdbcType="VARCHAR" property="email" />
+      <result column="address" jdbcType="VARCHAR" property="address" />
+      <result column="zip" jdbcType="VARCHAR" property="zip" />
+      <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+      <result column="title" jdbcType="INTEGER" property="title" />
+      <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
+      <result column="status" jdbcType="INTEGER" property="status" />
+      <result column="sort" jdbcType="INTEGER" property="sort" />
+  </resultMap>
+
+  <select id="selectById" parameterType="String" resultMap="BaseResultMap">
+    select *  from front_user where model_id = #{modelId};
+  </select>
+  <select id="selectByUsername" parameterType="String" resultMap="BaseResultMap">
+    select *  from front_user where username = #{username};
+  </select>
+</mapper>

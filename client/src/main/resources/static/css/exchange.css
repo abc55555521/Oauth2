@@ -1,0 +1,29 @@
+﻿.main{display: none}
+.wrap .active{display: block;}
+.main h2,body{text-align:center}
+.tab{line-height: 28px;margin-top: 30px;font-size: 14px}
+.tab .sub_tab{width: 136px;height: 28px;color:#e4f5f2;cursor:pointer}
+.tab .active{ -webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;background-color:#12c6ab;color:#fff;}
+.main h2,a{color:#fff}
+html{background-color:#151515}
+body{height:100vh;background:url(/static/img/exchange_bg.jpg) center 90px/contain no-repeat #0e0e0e;font-family:Microsoft YaHei,Arial;line-height:1}
+a{font-size:18px}
+a.logo{margin-top:-8px;width:188px;height:30px;display:inline-block;background:url(/static/img/exchange_logo.png) center center/contain no-repeat}
+.wrap{width:1035px;margin:0 auto}
+.header{background-color:#151515;height:90px}
+.nav li{float:left;margin-top:30px}
+.nav li.margin{margin-left:86px;margin-right:44px}
+.nav li .active{color:#12c6ab}
+.main .line{margin:0 auto 30px;width:146px;height:3px;background-color:#fff}
+.main .line-green{background-color:#12c6ab;width:50%;height:3px;display:block}
+.main h2{font-size:45px;margin-top:90px;margin-bottom:25px}
+.main h2 .font-green{color:#12c6ab}
+.main .note{font-size:16px;color:#e4f5f2;text-align:left;line-height:30px;margin-bottom:40px}
+.main .trade{padding-bottom:125px;text-align:center;font-weight:700;font-size:16px;color:#12c6ab}
+.main .trade .border{display:inline-block;line-height:60px;height:56px;width:93px;border:2px solid #12c6ab;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+.main .trade .num{width:56px;margin-right:10px}
+.main .trade i{margin:0 10px;font-size:25px;font-weight:700}
+.footer{background-color:#151515}
+.apply{display:inline-block;margin:0 auto 28px;color:#e8f7f5;font-size:18px;padding:11px 30px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;background-color:#11bda4}
+.copy_right{color:#384a54;font-size:14px;padding-bottom:5px}
+.main .trade i.aright{margin-left:-5px;background: url("/static/img/aright.png") 0 0 no-repeat;width: 40px;height: 17px;display: inline-block;}

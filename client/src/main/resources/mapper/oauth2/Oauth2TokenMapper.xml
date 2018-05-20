@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.oauth2.client.mapper.oauth2.Oauth2TokenMapper">
+  <resultMap id="BaseResultMap" type="demo.oauth2.client.model.oauth2.Oauth2Token">
+      <id column="model_id" jdbcType="INTEGER" property="modelId" />
+      <result column="access_token" jdbcType="VARCHAR" property="accessToken" />
+      <result column="refresh_token" jdbcType="VARCHAR" property="refreshToken" />
+      <result column="username" jdbcType="VARCHAR" property="username" />
+      <result column="client_id" jdbcType="VARCHAR" property="clientId" />
+      <result column="expire_in" jdbcType="TIMESTAMP" property="expireIn" />
+      <result column="refresh_expire_in" jdbcType="TIMESTAMP" property="refreshExpireIn" />
+      <result column="scope" jdbcType="VARCHAR" property="scope" />
+  </resultMap>
+
+  <select id="selectById" parameterType="String" resultMap="BaseResultMap">
+    select * from oauth2_token where model_id = #{modelId};
+  </select>
+  <select id="selectByAccessToken" parameterType="String" resultMap="BaseResultMap">
+    select * from oauth2_token where access_token = #{accessToken};
+  </select>
+  <select id="selectByRefreshToken" parameterType="String" resultMap="BaseResultMap">
+    select * from oauth2_token where refresh_token = #{refreshToken};
+  </select>
+  <select id="selectByUsernameClientId" resultMap="BaseResultMap">
+    select * from oauth2_token where username = #{0} and client_id = #{1};
+  </select>
+</mapper>

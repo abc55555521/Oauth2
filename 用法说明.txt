@@ -1,0 +1,31 @@
+1、访问顺序：
+	1)、http://localhost:8001/
+	2)、跳转至登录页，实际点击从Oauth2登录
+	3)、发起了http://localhost:8003验证请求，并返回code
+	4)、拿到code后，再次请求token，并在本地记录token
+	5)、可从首页或其他页面，请求userinfo，并记录用户信息或关联用户信息
+
+2、api接口
+	1)、http://localhost:8003/oauth2/authorize.html?client_id=1&response_type=code&redirect_uri=http://localhost:8001/getToken&state=state
+		以上get请求，参数必填
+	2）、http://localhost:8003/oauth2/token.html
+		以上post请求，参数为：client_id=1&client_secret=111&grant_type=authorization_code&redirect_uri=http://localhost:8001/getToken&code=acode&state=state
+	3)、http://localhost:8002/oauth2/api/userinfo.html?access_token=token...
+	
+	4)、资源端：http://localhost:8003/oauth2/check.html?access_token=token...
+		在线请求token的验证
+
+
+3、sql文件
+	server.sql---服务端的建表语句
+	resource.sql--资源端的建表语句
+	client.sql--客户端的建表语句
+	在新建三个数据库后（可任意命名，记得修改spring-boot的数据库连接）
+	在server端插入client记录，包括：client_id，client_secret
+		插入front_user表记录，用于帐号密码模式登录
+
+		在资源端插入Front_user表记录，用于提供用户资源api接口
+
+		客户端插入front_user表记录，由于自保存用户信息，及与资源端关联数据
+
+4、工具类中的HttpUtil是可以直接使用的urlconnection，供参考。

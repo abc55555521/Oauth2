@@ -1,0 +1,66 @@
+﻿.main .e_notice .noticc_ico,.main .list_qq .pay i,.main .qq h3 span{position:relative;top:5px;display:inline-block}
+.apply,.main .list_qq .name i,.main .list_qq .pay i,.main .qq h3 span,a.logo{display:inline-block}
+body{font-family:Microsoft YaHei,Arial;line-height:1;text-align:center}
+a{font-size:18px;color:#fff}
+a.logo{margin-top:-8px;width:188px;height:30px;
+	background:url(/static/img/exchange_logo.png) center center/contain no-repeat}
+.wrap{width:1035px;margin:0 auto}
+.header{background:url(/static/img/exchange_center_bg.jpg) 0 0/contain no-repeat #082433;padding-bottom:55px}
+
+.nav li{float:left;margin-top:30px}.nav li.margin{margin-left:86px;margin-right:44px}
+.nav li .active{color:#12c6ab}
+.header h2{margin:60px 0 32px;color:#fff;font-size:40px}
+.header h2 span{color:#12c6ab}
+.rate_box{width: 400px;margin:0 auto}
+.header .rate:nth-child(1){margin-right: 20px}
+.header .rate{margin-bottom:35px;width:360px;height:34px;line-height:34px;background-color:rgba(10,68,75,.8);-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;color:#eaf6f4;font-size:15px}
+.header p{line-height:26px;font-size:14px;color:#eaf6f4}
+
+.main{background-color:#f7f7f7;padding-bottom:55px}
+.main .e_notice{height:60px;line-height:60px;color:#333;font-size:15px;text-align:left;background-color:#fffbe8}
+.main .e_notice .noticc_ico{width:20px;height:20px;background:url(/static/img/noticc_ico.png) no-repeat}
+
+.main .div_qq{height:40px;line-height:40px;color:#444;font-size:22px;text-align:center;}
+.main .wx_ico{width: 20px;height: 20px;margin-left: 4px;}
+
+.main .qq h3{text-align:left;margin:10px 0 20px;font-size:22px;color:#666}
+.main .qq h3 span{margin-right:15px;width:7px;height:23px;background-color:#12c6ab}
+.main .list_qq li{position: relative;float:left;margin-right:15px;margin-bottom:15px;padding:24px 20px 24px 30px;text-align:left;width:193px;background-color:#fff;-webkit-box-shadow:0 0 10px #eee;-moz-box-shadow:0 0 10px #eee;box-shadow:0 0 10px #eee}
+.main .list_qq li.no_margin{margin-right:0}
+.main .list_qq li p{color:#666;cursor:pointer}
+.main .list_qq .name{font-size:14px}
+.main .list_qq .name i{position:relative;left:8px;width:14px;height:14px;background:url(/static/img/verif_ico.png) no-repeat}
+.main .list_qq .pay i{left:5px;width:20px;height:20px;background-color:salmon;border:1px solid #ddd;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;}
+.main .list_qq .pay .img_ico{left:5px;width:22px;height:22px;border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;top: 5px; position:relative}
+
+.hover_div{
+	position: absolute ;z-index: 9999;width: 90px;height: 90px;
+	background-color: #F7F7F7;border: solid #999 3px;right: -15px;
+	top: -30px;display: none;
+}
+.wx_img{width: 80px;height: 80px;margin: 5px 0 0 5px;}
+
+.main .list_qq .number{font-size:16px;font-weight:700;padding:5px 0 0 0}
+.main .list_qq .pay,.main .list_qq .fee{font-size:12px;color:#999;padding-top: 5px;}
+.main .tips{color:#e00;font-size:12px;text-align:left}
+.footer{padding-top:38px;padding-bottom:23px;background-color:#151515}
+.apply{margin:0 auto 28px;color:#e8f7f5;font-size:18px;padding:11px 30px;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;background-color:#11bda4;font-weight:700}
+.copy_right{color:#384a54;font-size:14px;}
+/*.pic-ico{background: url("./img/list_ico.jpg") 0 0 no-repeat}*/
+.pic-caifu{background-position: 0 0}
+.pic-chelizi{background-position: -20px 0}
+.pic-dingding{background-position: -40px 0}
+.pic-erjie{background-position: -60px 0}
+.pic-guimei{background-position: -80px 0}
+.pic-mayun{background-position: 0 -20px}
+.pic-shibage{background-position:-20px -20px}
+.pic-shishi{background-position: -40px -20px}
+.pic-tiantian{background-position: -60px -20px}
+.pic-xiaoai{background-position: -80px -20px}
+.pic-xiaolin{background-position: 0 -40px}
+.pic-xiaomeinv{background-position: -40px -20px}
+.pic-xiaopingguo{background-position: -40px -40px}
+.pic-xiaoxiongmao{background-position: -40px -60px}
+.pic-xingyun{background-position: -80px -40px}
+.pic-qianduoduo{background-position: -100px 0}
+.pic-tadian{background-position: -120px 0}

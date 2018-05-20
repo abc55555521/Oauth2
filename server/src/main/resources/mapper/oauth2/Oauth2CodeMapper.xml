@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.oauth2.server.mapper.oauth2.Oauth2CodeMapper">
+  <resultMap id="BaseResultMap" type="demo.oauth2.server.model.oauth2.Oauth2Code">
+      <id column="model_id" jdbcType="INTEGER" property="modelId" />
+      <result column="auth_code" jdbcType="VARCHAR" property="authCode" />
+      <result column="username" jdbcType="VARCHAR" property="username" />
+      <result column="client_id" jdbcType="VARCHAR" property="clientId" />
+      <result column="expire_in" jdbcType="DATE" property="expireIn" />
+  </resultMap>
+
+  <select id="selectById" parameterType="Integer" resultMap="BaseResultMap">
+    select * from oauth2_code where model_id = #{modelId};
+  </select>
+  <select id="selectByUsernameClientId" resultMap="BaseResultMap">
+    select * from oauth2_code where username = #{0} and client_id = #{1};
+  </select>
+  <select id="selectByAuthCode" resultMap="BaseResultMap">
+    select * from oauth2_code where auth_code = #{0};
+  </select>
+</mapper>
